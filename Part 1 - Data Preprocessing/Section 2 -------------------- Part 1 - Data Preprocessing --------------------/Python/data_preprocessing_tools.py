@@ -23,12 +23,16 @@ print(X)
 
 # Encoding categorical data
 # Encoding the Independent Variable
+# This will abstract data model exactly into binary
+# To made uniqe id data to made machine learning work prefectly
 from sklearn.compose import ColumnTransformer
 from sklearn.preprocessing import OneHotEncoder
 ct = ColumnTransformer(transformers=[('encoder', OneHotEncoder(), [0])], remainder='passthrough')
 X = np.array(ct.fit_transform(X))
 print(X)
+
 # Encoding the Dependent Variable
+# This will made data Percushe will change into binary
 from sklearn.preprocessing import LabelEncoder
 le = LabelEncoder()
 y = le.fit_transform(y)
