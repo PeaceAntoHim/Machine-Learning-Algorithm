@@ -2,6 +2,7 @@
 
 # Importing the dataset
 dataset = read.csv('Data.csv')
+# dataset = dataset[, 2:3]
 
 # Taking care of missing data
 # This to take care of missing data Age and fill it with mean calculation of data
